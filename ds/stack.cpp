@@ -42,6 +42,11 @@ class Stack {
 		int length() {
 			return count;
 		}
+
+		bool empty() {
+			return count > 0;
+		}
+
 };
 
 int main() {
