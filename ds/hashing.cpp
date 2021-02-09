@@ -1,4 +1,5 @@
 #include <iostream>
+<<<<<<< HEAD
 #include <cstdlib>
 using namespace std;
 
