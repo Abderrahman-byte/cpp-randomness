@@ -46,7 +46,6 @@ class Stack {
 		bool empty() {
 			return count > 0;
 		}
-
 };
 
 int main() {
