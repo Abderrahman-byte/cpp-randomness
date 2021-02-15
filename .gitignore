@@ -1,6 +1,7 @@
 *
 !*/
 !*.*
-!.gitignare
+!.gitignore
 *.o
 *.out
+^([^.]+)$
