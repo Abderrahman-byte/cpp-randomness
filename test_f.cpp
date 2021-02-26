@@ -1,9 +1,6 @@
 #include <iostream>
 
 int main () {
-	float x ;
-	x = 1.5f;
-
-	std::cout << 1.5f << std::endl;
+	std::cout << (2 + 1.5) << std::endl;
 	return 0;
 }
