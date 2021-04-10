@@ -9,23 +9,24 @@ std::string split(std::string, std::string, int &, int &);
 
 int main () {
 	int i = 0;
-	std::ifstream f(FILENAME);
+	std::ifstream f(FILENAME); // Ouvrir le fichier qui contient les donnees des personnes
 	std::string line;
 
 	while(getline(f, line)) {
-		int start = 0, end = line.find(SEP, start);
+		int start = 0, end = line.find(SEP, start); // Trouver la premier partie avant $
 
 		std::cout << "[*] Contact " << ++i << " : " << std::endl;
-		std::cout << " \tNom : " << split(line, SEP, start, end) << std::endl;
-		std::cout << " \tNumero de telephone : " << split(line, SEP, start, end) << std::endl;
-		std::cout << " \tAddress : " << split(line, SEP, start, end) << std::endl;	
+		std::cout << "\tNom : " << split(line, SEP, start, end) << std::endl;  // Afficher partie le nom
+		std::cout << "\tNumero de telephone : " << split(line, SEP, start, end) << std::endl; // Afficher partie le numero
+		std::cout << "\tAddress : " << split(line, SEP, start, end) << std::endl; // Afficher partie l'address
 	}
 
-	f.close();
+	f.close(); // Fermer le fichier
 
 	return 0;
 }
 
+// Separer les donnees de chaque ligne 
 std::string split(std::string str, std::string del, int &start, int &end) {
 	if(end != -1) {
 		int s = start, e = end;
